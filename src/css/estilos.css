@@ -63,24 +63,26 @@ nav .more{
 }
 
 nav .menu{
-    margin-top: 45px;
+    margin-top: 60px;
+    margin-left: 14px;
     position: absolute;
     display: none;
     flex-direction: column;
-    min-width: 200px;
+    min-width: 150px;
 
-    background-color: white;
+    background-color: rgba(95, 97, 117, 0.26);
 }
 
 nav .menu a{
     padding: 10px;
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 nav .menu a:hover{
-    background-color: black;
-    color: white;
+    background-color: rgba(142, 148, 233, 0.171);
+    color: rgb(8, 5, 15);
+    font-weight: 500;
 }
 
 nav .mobile {
