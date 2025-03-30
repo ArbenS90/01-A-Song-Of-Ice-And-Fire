@@ -1,0 +1,151 @@
+/* Variables para los temas */
+:root {
+  /* Tema claro (default) */
+  --bg-color: #f0f0f0;
+  --text-color: #333;
+  --header-bg: #9e2a2b;
+  --header-text: #ffffff;
+  --button-bg: #9e2a2b;
+  --button-text: #ffffff;
+  --card-bg: #ffffff;
+  --border-color: #ddd;
+}
+
+/* Tema oscuro */
+.dark-theme {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --header-bg: #1d3557;
+  --header-text: #f1faee;
+  --button-bg: #4a4e69;
+  --button-text: #f1faee;
+  --card-bg: #1f1f1f;
+  --border-color: #333;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+  background-image: url('https://via.placeholder.com/1920x1080'); /* Placeholder para imagen de fondo */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.dark-theme {
+  background-image: url('https://via.placeholder.com/1920x1080'); /* Otra imagen para tema oscuro */
+}
+
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+h1, h2, h3 {
+  color: var(--header-bg);
+}
+
+.dark-theme h1, .dark-theme h2, .dark-theme h3 {
+  color: #a8dadc;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Iconos para el toggle */
+.slider:after {
+  content: "☀️";
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  font-size: 14px;
+}
+
+input:checked + .slider:after {
+  content: "🌙";
+  left: 35px;
+}
