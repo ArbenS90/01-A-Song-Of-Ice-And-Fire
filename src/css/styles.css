@@ -1,19 +1,20 @@
 /* Variables para los temas */
 :root {
   /* Tema claro (default) */
-  --bg-color: #f0f0f0;
-  --text-color: #333;
-  --header-bg: #9e2a2b;
-  --header-text: #ffffff;
-  --button-bg: #9e2a2b;
+  --bg-color: #faf8f5; 
+  --text-color: #6a5d50; 
+  --header-bg: #debe81; 
+  --header-text: #4a3f35; 
+  --button-bg: #d1b56e; 
   --button-text: #ffffff;
   --card-bg: #ffffff;
-  --border-color: #ddd;
+  --border-color: #efe5d5; 
+  --heading-color: #c8ad7f; 
 }
 
 /* Tema oscuro */
 .dark-theme {
-  --bg-color: #121212;
+  --bg-color: #191919;
   --text-color: #e0e0e0;
   --header-bg: #1d3557;
   --header-text: #f1faee;
@@ -24,19 +25,19 @@
 }
 
 body {
-  font-family: 'Georgia', serif;
+  font-family: 'Source Sans 3', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0;
   padding: 0;
   transition: all 0.3s ease;
-  background-image: url('https://via.placeholder.com/1920x1080'); /* Placeholder para imagen de fondo */
+  background-image: url('/src/img/fondos/light.jpg'); /* Placeholder para imagen de fondo */
   background-size: cover;
   background-attachment: fixed;
 }
 
 .dark-theme {
-  background-image: url('https://via.placeholder.com/1920x1080'); /* Otra imagen para tema oscuro */
+  background-image: url('/src/img/fondos/dark.jpg'); /* Otra imagen para tema oscuro */
 }
 
 header {
